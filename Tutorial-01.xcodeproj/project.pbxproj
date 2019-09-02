@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		80DDFF22231D6E5100645582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF21231D6E5100645582 /* AppDelegate.swift */; };
-		80DDFF24231D6E5100645582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF23231D6E5100645582 /* ViewController.swift */; };
+		80DDFF24231D6E5100645582 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF23231D6E5100645582 /* TableViewController.swift */; };
 		80DDFF27231D6E5100645582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DDFF25231D6E5100645582 /* Main.storyboard */; };
 		80DDFF29231D6E5300645582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80DDFF28231D6E5300645582 /* Assets.xcassets */; };
 		80DDFF2C231D6E5300645582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DDFF2A231D6E5300645582 /* LaunchScreen.storyboard */; };
+		80DDFF34231D702800645582 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF33231D702800645582 /* ProductCell.swift */; };
+		80DDFF36231D716B00645582 /* AppleProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF35231D716B00645582 /* AppleProduct.swift */; };
+		80DDFF3C231D731600645582 /* ProductDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF3B231D731600645582 /* ProductDataSource.swift */; };
+		80DDFF3E231D744B00645582 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF3D231D744B00645582 /* ApiHandler.swift */; };
+		80DDFF40231DA77800645582 /* CellStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DDFF3F231DA77800645582 /* CellStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		80DDFF1E231D6E5100645582 /* Tutorial-01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tutorial-01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DDFF21231D6E5100645582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80DDFF23231D6E5100645582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80DDFF23231D6E5100645582 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		80DDFF26231D6E5100645582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80DDFF28231D6E5300645582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80DDFF2B231D6E5300645582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80DDFF2D231D6E5300645582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80DDFF33231D702800645582 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		80DDFF35231D716B00645582 /* AppleProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleProduct.swift; sourceTree = "<group>"; };
+		80DDFF3B231D731600645582 /* ProductDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataSource.swift; sourceTree = "<group>"; };
+		80DDFF3D231D744B00645582 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
+		80DDFF3F231DA77800645582 /* CellStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		80DDFF20231D6E5100645582 /* Tutorial-01 */ = {
 			isa = PBXGroup;
 			children = (
+				80DDFF3A231D71D600645582 /* Controller */,
+				80DDFF39231D71D200645582 /* View */,
+				80DDFF38231D71CD00645582 /* Model */,
+				80DDFF37231D71C500645582 /* Networking */,
 				80DDFF21231D6E5100645582 /* AppDelegate.swift */,
-				80DDFF23231D6E5100645582 /* ViewController.swift */,
 				80DDFF25231D6E5100645582 /* Main.storyboard */,
 				80DDFF28231D6E5300645582 /* Assets.xcassets */,
 				80DDFF2A231D6E5300645582 /* LaunchScreen.storyboard */,
 				80DDFF2D231D6E5300645582 /* Info.plist */,
 			);
 			path = "Tutorial-01";
+			sourceTree = "<group>";
+		};
+		80DDFF37231D71C500645582 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				80DDFF3D231D744B00645582 /* ApiHandler.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		80DDFF38231D71CD00645582 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80DDFF35231D716B00645582 /* AppleProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		80DDFF39231D71D200645582 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80DDFF33231D702800645582 /* ProductCell.swift */,
+				80DDFF3F231DA77800645582 /* CellStack.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80DDFF3A231D71D600645582 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				80DDFF23231D6E5100645582 /* TableViewController.swift */,
+				80DDFF3B231D731600645582 /* ProductDataSource.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80DDFF24231D6E5100645582 /* ViewController.swift in Sources */,
+				80DDFF40231DA77800645582 /* CellStack.swift in Sources */,
+				80DDFF36231D716B00645582 /* AppleProduct.swift in Sources */,
+				80DDFF3E231D744B00645582 /* ApiHandler.swift in Sources */,
+				80DDFF34231D702800645582 /* ProductCell.swift in Sources */,
+				80DDFF24231D6E5100645582 /* TableViewController.swift in Sources */,
+				80DDFF3C231D731600645582 /* ProductDataSource.swift in Sources */,
 				80DDFF22231D6E5100645582 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
